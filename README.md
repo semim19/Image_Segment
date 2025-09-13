@@ -19,12 +19,12 @@ Our group implemented and experimented with **Image Segmentation** (Computer Vis
 - Achieved [insert metric results] on the test set.  
 - Visualized segmentation masks alongside original images for comparison.  
 
-## Project 2: Soft Actor-Critic (SAC)
+### Project 2: Soft Actor-Critic (SAC)
 
-### Introduction
+#### Introduction
 Soft Actor-Critic (SAC) is a **modern reinforcement learning algorithm** that combines the strengths of **policy gradient methods** (actor-critic) with the principle of **entropy maximization**. By encouraging exploration, SAC often achieves more stable learning compared to traditional RL methods.  
 
-### Description
+#### Description
 The SAC algorithm is built on three main ideas:  
 
 1. **Actor-Critic Framework**  
@@ -38,11 +38,6 @@ The SAC algorithm is built on three main ideas:
 3. **Off-Policy Learning**  
    - Unlike on-policy methods (like PPO), SAC reuses past experiences stored in a **Replay Buffer**, making it more sample-efficient.  
 
-Mathematically, the SAC objective is:  
-
-\[
-J(\pi) = \mathbb{E}_{(s,a) \sim \pi} \Big[ Q(s, a) + \alpha \, \mathcal{H}(\pi(\cdot|s)) \Big]
-\]
 
 where  
 - \( Q(s, a) \): estimated value of action \(a\) in state \(s\),  
@@ -53,7 +48,7 @@ In practice, SAC achieves **robust, stable, and high-performing policies** on co
 
 
 
-### Implementation
+#### Implementation
 - Replay Buffer for experience storage  
 - Actor-Critic neural networks  
 - Entropy-regularized objective for improved exploration  
